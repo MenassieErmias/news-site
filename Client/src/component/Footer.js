@@ -10,10 +10,10 @@ const Footer = () => {
 								<h3 className={classes.title}>Get in Touch</h3>
 								<div className={classes.contactinfo}>
 									<p>
-										<i class="fa fa-map-marker"></i>123 News Street, NY, USA
+										<i class="fa fa-map-marker"></i>123 News Street, AA, Ethiopia
 									</p>
 									<p>
-										<i class="fa fa-envelope"></i>info@example.com
+										<i class="fa fa-envelope"></i>news@mail.com
 									</p>
 									<p>
 										<i class="fa fa-phone"></i>+123-456-7890
@@ -44,19 +44,19 @@ const Footer = () => {
 								<h3 className={classes.title}>Useful Links</h3>
 								<ul>
 									<li>
-										<a href="#">Lorem ipsum</a>
+										<a href="#">Breaking</a>
 									</li>
 									<li>
-										<a href="#">Pellentesque</a>
+										<a href="#">Local</a>
 									</li>
 									<li>
-										<a href="#">Aenean vulputate</a>
+										<a href="#">Global</a>
 									</li>
 									<li>
-										<a href="#">Vestibulum sit amet</a>
+										<a href="#">Business</a>
 									</li>
 									<li>
-										<a href="#">Nam dignissim</a>
+										<a href="#">Entertainment and Sports</a>
 									</li>
 								</ul>
 							</div>
@@ -67,19 +67,19 @@ const Footer = () => {
 								<h3 className={classes.title}>Quick Links</h3>
 								<ul>
 									<li>
-										<a href="#">Lorem ipsum</a>
+										<a href="#">US elections</a>
 									</li>
 									<li>
-										<a href="#">Pellentesque</a>
+										<a href="#">GERD</a>
 									</li>
 									<li>
-										<a href="#">Aenean vulputate</a>
+										<a href="#">Ethiopian Politics</a>
 									</li>
 									<li>
-										<a href="#">Vestibulum sit amet</a>
+										<a href="#">Covid-19</a>
 									</li>
 									<li>
-										<a href="#">Nam dignissim</a>
+										<a href="#">UEFA Champions League</a>
 									</li>
 								</ul>
 							</div>
@@ -90,8 +90,7 @@ const Footer = () => {
 								<h3 className={classes.title}>Newsletter</h3>
 								<div className={classes.newsletter}>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Vivamus sed porta dui. Class aptent taciti sociosqu
+										Send us your email for daily mail updates.
 									</p>
 									<form>
 										<input
