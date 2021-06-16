@@ -126,26 +126,6 @@ const Footer = () => {
 			</div>
 			{/* <!-- Footer Menu End --> */}
 
-			{/* <!-- Footer Bottom Start --> */}
-			<div className={classes.footerbottom}>
-				<div className={classes.container} class="container">
-					<div class="row">
-						<div class="col-md-6" className={classes.copyright}>
-							<p>
-								Copyright &copy; <a href="https://htmlcodex.com">HTML Codex</a>.
-								All Rights Reserved
-							</p>
-						</div>
-
-						<div class="col-md-6" className={classes.templateby}>
-							<p>
-								Template By <a href="https://htmlcodex.com">HTML Codex</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			{/* <!-- Footer Bottom End --> */}
 
 			{/* <!-- Back to Top --> */}
 			<a href="#" class="back-to-top">
