@@ -39,15 +39,6 @@ const NewsList = (props) => {
 
 	return (
 		<div className="news-list">
-			<Pagination
-				PostsPerPage={postsPerPage}
-				totalPage={props.news.length}
-				paginate={paginate}
-				prev={prev}
-				next={next}
-			/>
-			<br />
-
 			<div class="tab-news">
 				<div class="container">
 					<div class="row">

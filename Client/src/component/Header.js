@@ -77,14 +77,14 @@ const Header = () => {
 									Home
 								</Link>
 
-								<Link to="/" class="nav-item nav-link">
+								<Link to="/sport" class="nav-item nav-link">
 									Sports
 								</Link>
-								<Link to="/" class="nav-item nav-link">
+								<Link to="/technology" class="nav-item nav-link">
 									Technology
 								</Link>
 
-								<Link to="/" class="nav-item nav-link">
+								<Link to="/business" class="nav-item nav-link">
 									Business
 								</Link>
 

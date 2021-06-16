@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router";
 
 const Create = () => {
+	const [category, setCategory] = useState("Sport");
 	const [title, setTitle] = useState("");
 	const [body, setBody] = useState("");
 	// const [author, setAuthor] = useState("abdu");
@@ -11,7 +12,7 @@ const Create = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setIsPending(true);
-		const blog = { title, body };
+		const blog = { title, body, category };
 		fetch("/api/postNewNews", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
@@ -24,6 +25,7 @@ const Create = () => {
 		history.push("/");
 	};
 
+	console.log(category);
 	return (
 		<div className="create">
 			<h2>Add a New News</h2>
@@ -46,6 +48,19 @@ const Create = () => {
 					<option value="abdu">abdu</option>
 					<option value="teddy">teddy</option>
 				</select> */}
+				<select
+					value={category}
+					onChange={(e) => {
+						const selectcat = e.target.value;
+						setCategory(selectcat);
+					}}
+				>
+					<option>Select category</option>
+					<option value="sport">Sport</option>
+					<option value="technology">Technology</option>
+					<option value="business">Business</option>
+					<option value="other">Other</option>
+				</select>
 				{!isPending && <button>Add News</button>}
 				{isPending && <button disabled>Adding news....</button>}
 			</form>

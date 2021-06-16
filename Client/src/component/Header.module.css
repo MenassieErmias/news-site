@@ -88,6 +88,7 @@
 
 .brand .bsearch {
 	width: 100%;
+	border-radius: 10px;
 }
 
 .brand .bsearch input[type="text"] {

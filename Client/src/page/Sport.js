@@ -1,12 +1,8 @@
 import { useState } from "react";
 import NewsList from "../component/NewsList";
 import TopNews from "../component/TopNews";
-import CategoryNews from "../component/CategoryNews";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
 import useFetch from "../component/useFetch";
-
-const Home = () => {
+const Sport = () => {
 	const [page, setPage] = useState(1);
 	const changePage = (page) => {
 		setPage(page);
@@ -21,10 +17,9 @@ const Home = () => {
 			{error && <div>{error}</div>}
 			{isPending && <div>Loading.....</div>}
 			{news && <TopNews />}
-			{news && <CategoryNews />}
 			{news && <NewsList news={news} changePage={changePage} error={error} />}
 		</div>
 	);
 };
 
-export default Home;
+export default Sport;
