@@ -115,7 +115,7 @@ const Footer = () => {
 				<div className={classes.container} class="container">
 					<div className={classes.fmenu}>
 						<a href="">Terms of use</a>
-						<a href="">Privacy policy</a>
+						<a href="">company Privacy policy</a>
 						<a href="">Cookies</a>
 						<a href="">Accessibility help</a>
 						<a href="">Advertise with us</a>
