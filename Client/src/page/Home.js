@@ -15,7 +15,13 @@ const Home = () => {
 	console.log(page);
 
 	return (
-		
+		<div className="home">
+			{error && <div>{error}</div>}
+			{isPending && <div>Loading.....</div>}
+			{news && <TopNews />}
+			{news && <CategoryNews />}
+			{news && <NewsList news={news} changePage={changePage} error={error} />}
+		</div>
 	);
 };
 
