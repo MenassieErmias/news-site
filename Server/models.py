@@ -26,19 +26,5 @@ class Post(db.Model):
         self.admin_id = admin_id
         self.image_file = image_file
 
-class Admin(db.Model,UserMixin):
-    __tablename__ = 'admins'
 
-    id = db.Column(db.Integer,primary_key=True)
-    username = db.Column(db.String(),unique=True,nullable=False)
-    email = db.Column(db.String(),unique=True,nullable=False)
-    profile_image = db.Column(db.String(),nullable=False,default='default.jpg')
-    password = db.Column(db.String(),nullable=False)
-    date_registered = db.Column(db.DateTime,nullable=False,default=datetime.utcnow)
-    posts = db.relationship('Post',backref='author',lazy=True)
-
-    def __init__(self,username,email,password):
-        self.username = username
-        self.email = email
-        self.password = password
 
