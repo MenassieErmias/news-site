@@ -20,7 +20,18 @@ class Allnews(Resource):
 
         return results
 
-
+class PostNewNews(Resource):
+    def post(self):
+        request_data = json.loads(request.data)
+        admin = Admin.query.filter_by(id=1).first()
+        admin_id = admin.id
+        title = request_data['title']
+        body = request_data['body']
+        category = request_data['category']
+        image_file = request_data['fd']
+        post = Post(title,body,category,admin_id,image_file)
+        db.session.add(post)
+        db.session.commit()
 
 class Detailpost(Resource):
     def get(self,id):
