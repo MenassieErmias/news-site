@@ -5,14 +5,25 @@ const Create = () => {
 	const [category, setCategory] = useState("Sport");
 	const [title, setTitle] = useState("");
 	const [body, setBody] = useState("");
-	// const [author, setAuthor] = useState("abdu");
+	const [image, setImage] = useState();
+
+	const fileSelectedHandler = (event) => {
+		console.log(event.target.files[0]);
+		setImage(event.target.files[0]);
+	};
+
 	const [isPending, setIsPending] = useState(false);
 	const history = useHistory();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		const fd = new FormData();
+		fd.append("image", image, image.name);
+		console.log(fd);
+
 		setIsPending(true);
-		const blog = { title, body, category };
+		const blog = { title, body, category, fd };
 		fetch("/api/postNewNews", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
@@ -26,8 +37,10 @@ const Create = () => {
 	};
 
 	console.log(category);
+
+	// console.log(image);
 	return (
-		<div className="create">
+		<div className="create  content">
 			<h2>Add a New News</h2>
 			<form onSubmit={handleSubmit}>
 				<label>News title:</label>
@@ -61,6 +74,12 @@ const Create = () => {
 					<option value="business">Business</option>
 					<option value="other">Other</option>
 				</select>
+				<input
+					type="file"
+					id="myFile"
+					name="filename"
+					onChange={fileSelectedHandler}
+				/>
 				{!isPending && <button>Add News</button>}
 				{isPending && <button disabled>Adding news....</button>}
 			</form>

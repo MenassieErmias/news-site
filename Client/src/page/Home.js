@@ -2,8 +2,6 @@ import { useState } from "react";
 import NewsList from "../component/NewsList";
 import TopNews from "../component/TopNews";
 import CategoryNews from "../component/CategoryNews";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
 import useFetch from "../component/useFetch";
 
 const Home = () => {

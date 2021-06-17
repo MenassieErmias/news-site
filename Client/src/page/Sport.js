@@ -10,7 +10,7 @@ const Sport = () => {
 
 	const { data: news, isPending, error } = useFetch("/api?page=" + page);
 
-	console.log(page);
+	// console.log(news[0].category);
 
 	return (
 		<div className="home">

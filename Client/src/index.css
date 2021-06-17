@@ -57,8 +57,8 @@
 
 .create {
 	max-width: 400px;
-	margin: 0 autho;
 	text-align: center;
+	margin-top: -30px;
 }
 
 .create label {

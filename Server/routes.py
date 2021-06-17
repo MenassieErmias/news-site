@@ -1,4 +1,4 @@
-from flask import Flask , Response , json , request , jsonify
+from flask import Flask , Response ,request
 from config import db , app , bcrypt , api
 from models import Admin,Post
 from flask_login import login_user , current_user
@@ -28,7 +28,8 @@ class PostNewNews(Resource):
         title = request_data['title']
         body = request_data['body']
         category = request_data['category']
-        post = Post(title,body,category,admin_id)
+        image_file = request_data['fd']
+        post = Post(title,body,category,admin_id,image_file)
         db.session.add(post)
         db.session.commit()
 

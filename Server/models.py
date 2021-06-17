@@ -16,14 +16,15 @@ class Post(db.Model):
     category = db.Column(db.String())
     date_posted = db.Column(db.DateTime,nullable=False,default=datetime.utcnow)
     admin_id = db.Column(db.Integer,db.ForeignKey('admins.id'),nullable=False)
-    # image_file = db.Column(db.String(),nullable=False,defulat='defualt.jpg')
+    image_file = db.Column(db.String(),nullable=False,defulat='defualt.jpg')
         
 
-    def __init__(self,title,body,category,admin_id):
+    def __init__(self,title,body,category,admin_id,image_file):
         self.title = title
         self.body = body
         self.category = category
         self.admin_id = admin_id
+        self.image_file = image_file
 
 class Admin(db.Model,UserMixin):
     __tablename__ = 'admins'
